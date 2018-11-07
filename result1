@@ -1,0 +1,11 @@
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:57621           0.0.0.0:*               LISTEN      2746/spotify        
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      733/systemd-resolve 
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      4097/cupsd          
+tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN      1010/postgres       
+tcp        0      0 127.0.0.1:5433          0.0.0.0:*               LISTEN      1011/postgres       
+tcp        0      0 127.0.0.1:4381          0.0.0.0:*               LISTEN      2746/spotify        
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      1076/mysqld         
+tcp        0      0 0.0.0.0:39985           0.0.0.0:*               LISTEN      2746/spotify        
+tcp6       0      0 ::1:631                 :::*                    LISTEN      4097/cupsd          
