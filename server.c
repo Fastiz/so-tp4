@@ -16,17 +16,13 @@ int main(int argc, char const *argv[])
     int opt = 1; 
     int addrlen = sizeof(address); 
     char buffer[128] = {0}; 
-    //char *hello = "Hello from server"; 
-  
        
-    // Creating socket file descriptor 
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) 
     { 
         perror("socket failed"); 
         exit(EXIT_FAILURE); 
     } 
        
-    // Forcefully attaching socket to the port 8080 
     if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, 
                                                   &opt, sizeof(opt))) 
     { 
@@ -37,7 +33,6 @@ int main(int argc, char const *argv[])
     address.sin_addr.s_addr = INADDR_ANY; 
     address.sin_port = htons( PORT ); 
        
-    // Forcefully attaching socket to the port 8080 
     if (bind(server_fd, (struct sockaddr *)&address,  
                                  sizeof(address))<0) 
     { 
@@ -60,23 +55,13 @@ int main(int argc, char const *argv[])
     printLevel(1);
 
     while (level <= 9){
-
         valread = read( new_socket , buffer, 128); 
-   // printf("%s\n",buffer ); 
-   // send(new_socket , hello , strlen(hello) , 0 ); 
-   // printf("Hello message sent\n"); 
-
     if(compareKey(buffer, level) == 1){
         level++;
         printLevel(level);
     }
     clearBuff(buffer);
-
-
-
-
     }
-
     return 0; 
 } 
 

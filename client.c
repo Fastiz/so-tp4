@@ -32,7 +32,6 @@ void askForAnswer(){
   sendAnswer(buff);
 }
 
-
 int main(int argc, char *argv[])
 {
     sockfd = 0;
@@ -81,6 +80,21 @@ int main(int argc, char *argv[])
 
     waitForEnter();
     sendAnswer("me gusta el chocolate\n");
+
+    waitForEnter();
+    sendAnswer("ESGOLODROBO\n");
+
+    waitForEnter();
+    sendAnswer("amarillo\n");
+
+    waitForEnter();
+    sendAnswer("Heisenberg\n");
+
+    waitForEnter();
+    sendAnswer("indefinido\n");
+
+    waitForEnter();
+    sendAnswer("Colombia\n");
 
     while(1){
       askForAnswer();
