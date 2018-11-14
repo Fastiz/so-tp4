@@ -9,6 +9,8 @@
 #include <errno.h>
 #include <arpa/inet.h>
 
+char *gets(char *s);
+
 int sockfd;
 
 void waitForEnter(){
@@ -24,7 +26,7 @@ void sendAnswer(char* answer){
 
 void askForAnswer(){
   char buff[100];
-  gets(buff);
+  fgets(buff, sizeof(buff), stdin);
   int aux= strlen(buff);
   buff[aux] = '\n';
   buff[aux+1]=0;
